@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "vitor-workspace",
+            "prefix": "vt",
             "style": "kebab-case"
           }
         ]

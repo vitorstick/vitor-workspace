@@ -2,7 +2,7 @@
   "name": "personal-page",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "vitor-workspace",
+  "prefix": "vt",
   "sourceRoot": "apps/personal-page/src",
   "tags": [],
   "targets": {
