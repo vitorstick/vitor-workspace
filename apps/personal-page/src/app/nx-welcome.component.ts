@@ -83,7 +83,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
       .wrapper {
         width: 100%;
       }
-      .container {
+      .nx-container {
         margin-left: auto;
         margin-right: auto;
         max-width: 768px;
@@ -427,7 +427,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
       }
     </style>
     <div class="wrapper">
-      <div class="container">
+      <div class="nx-container">
         <!--  WELCOME  -->
         <div id="welcome">
           <h1>
