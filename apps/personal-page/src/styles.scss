@@ -3,3 +3,25 @@
 @tailwind utilities;
 
 /* You can add global styles to this file, and also import other style files */
+.blog-content {
+  p {
+    margin: 0 0 1.25rem 0;
+    font-size: 1.125rem;
+    line-height: 2rem;
+  }
+
+  .article-body-image-wrapper {
+    margin: 0 0 1.25rem 0;
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  .highlight {
+    margin: 0 0 1.25rem 0;
+  }
+
+  pre {
+    overflow: hidden
+  };
+}

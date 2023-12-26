@@ -1,0 +1,76 @@
+<div
+  class="lg:rounded-2xl p-4 md:p-8 rounded-2xl my-8 bg-white dark:bg-[#111111]"
+>
+  @if (blogPostDetail$ | async; as blogPostDetail) {
+  <h2
+    class="text-[#ef4060] dark:hover:text-[#FA5252] text-4xl text-center font-bold"
+  >
+    {{ blogPostDetail.title }}
+  </h2>
+  <img
+    alt="blog details image"
+    [src]="blogPostDetail.cover_image"
+    class="w-full md:h-[200px] h-auto object-cover rounded-xl mt-6"
+    loading="lazy"
+    style="color: transparent"
+  />
+  <div class="grid grid-cols-1 lg:grid-cols-2 my-6">
+    <div class="space-y-2">
+      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
+        <svg
+          stroke="currentColor"
+          fill="none"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="text-lg mr-2 hidden sm:block"
+          height="1em"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        <span class="font-medium">{{ blogPostDetail.tag_list }}</span>
+      </p>
+    </div>
+    <div class="space-y-2">
+      <p class="dark:text-white flex items-center text-[15px] sm:text-lg">
+        <svg
+          stroke="currentColor"
+          fill="none"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="text-lg mr-2 hidden sm:block"
+          height="1em"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+          ></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+        <span
+          class="font-medium transition-all duration-300 ease-in-out hover:text-[#ef4060]"
+        >
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            [href]="blogPostDetail.canonical_url"
+            >link</a
+          >
+        </span>
+      </p>
+    </div>
+  </div>
+  <div
+    class="dark:text-white text-2line font-normal text-[15px] sm:text-sm blog-content"
+    [innerHTML]="blogPostDetail.body_html"
+  ></div>
+  }
+</div>

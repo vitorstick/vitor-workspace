@@ -1,5 +1,8 @@
-.router-item {
+.menu-item {
   &.active {
-    display: inline;
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+    --tw-gradient-to: #DD2476 var(--tw-gradient-to-position);
   }
 }

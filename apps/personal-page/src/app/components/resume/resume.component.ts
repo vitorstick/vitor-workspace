@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 type ResumeData = {
   companyName: string;
@@ -11,7 +11,7 @@ type ResumeData = {
   selector: 'vt-resume',
   standalone: true,
   templateUrl: './resume.component.html',
-  styleUrls: ['./resume.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ResumeComponent {
   resumeData: ResumeData[] = [
@@ -136,15 +136,4 @@ export class ResumeComponent {
       technologies: ['JavaScript', 'PHP', 'HTML', 'CSS']
     }
   ];
-
-
-// WeCreateYou
-// Web Developer
-// abril de 2015 - abril de 2016 (1 ano 1 mês)
-// UI Developer;
-// Conception, design and build websites, and e-commerce solutions;
-// Development of web marketing strategy;
-// Customer relations and market prospection;
-// Oh, and I also work with Joomla, (I don't like it)
-
 }

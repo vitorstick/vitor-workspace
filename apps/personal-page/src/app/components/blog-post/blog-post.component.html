@@ -1,0 +1,25 @@
+<div
+  style="background: rgb(252, 244, 255)"
+  class="p-5 rounded-lg mb-2 h-full dark:border-[#212425] dark:border-2"
+  [routerLink]="['/blog', post.id]"
+>
+  <div class="overflow-hidden rounded-lg">
+    <img
+      alt="blog"
+      [src]="post.social_image"
+      width="310"
+      height="310"
+      class="rounded-lg w-full cursor-pointer transition duration-200 ease-in-out transform hover:scale-110"
+      loading="lazy"
+      style="color: transparent"
+    />
+  </div>
+  <div class="flex mt-4 text-tiny text-gray-lite dark:text-[#A6A6A6]">
+    <span>{{ post.created_at | date }}</span>
+  </div>
+  <h3
+    class="text-lg font-medium dark:text-white duration-300 transition cursor-pointer mt-3 pr-4 hover:text-[#FA5252] dark:hover:text-[#FA5252]"
+  >
+    {{ post.title }}
+  </h3>
+</div>

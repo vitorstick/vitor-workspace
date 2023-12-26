@@ -2,7 +2,9 @@
   "name": "@vitor-workspace/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "serve": "npx nx run personal-page:serve"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~17.0.6",

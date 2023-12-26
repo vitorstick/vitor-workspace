@@ -3,6 +3,7 @@ import { Route } from '@angular/router';
 enum RoutePath {
   HOME = 'home',
   RESUME = 'resume',
+  BLOG = 'blog',
 }
 
 export const appRoutes: Route[] = [
@@ -22,5 +23,10 @@ export const appRoutes: Route[] = [
        import('./components/resume/resume.routes').then(
          (m) => m.RESUME_ROUTES,
        ),
+  },
+  {
+    path: RoutePath.BLOG,
+    loadChildren: () =>
+      import('./components/blog/blog.routes').then((m) => m.BLOG_ROUTES),
   },
 ];

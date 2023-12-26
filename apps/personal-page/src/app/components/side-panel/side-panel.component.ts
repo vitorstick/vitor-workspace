@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   standalone: true,
   selector: 'vt-side-panel',
   templateUrl: './side-panel.component.html',
-  styleUrls: ['./side-panel.component.css']
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SidePanelComponent {
 }

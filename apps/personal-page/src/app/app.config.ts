@@ -1,10 +1,15 @@
+import { provideHttpClient, withFetch } from '@angular/common/http';
 import { ApplicationConfig } from '@angular/core';
-import { PreloadAllModules, provideRouter, withDebugTracing, withPreloading } from '@angular/router';
+import { PreloadAllModules, provideRouter, withPreloading } from '@angular/router';
 import { appRoutes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(appRoutes,
-      withPreloading(PreloadAllModules),
-      withDebugTracing(),
-    )],
+  providers: [
+      provideRouter(appRoutes,
+        withPreloading(PreloadAllModules),
+      ),
+      provideHttpClient(withFetch())
+    ],
 };
+
+

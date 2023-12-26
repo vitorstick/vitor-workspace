@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { RouterLinkWithHref, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { SidePanelComponent } from './components/side-panel/side-panel.component';
-import { TemplateComponent } from './components/template/template.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 
 @Component({
@@ -13,7 +12,6 @@ import { NxWelcomeComponent } from './nx-welcome.component';
     RouterLinkWithHref,
     SidePanelComponent,
     HeaderComponent,
-    TemplateComponent,
   ],
   selector: 'vt-root',
   templateUrl: './app.component.html',
