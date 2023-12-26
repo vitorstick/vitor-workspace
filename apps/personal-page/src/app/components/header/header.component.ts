@@ -20,16 +20,16 @@ type HeaderRoutes = {
 export class HeaderComponent {
   headerRoutes: HeaderRoutes[] = [
     {
-      label: 'home',
+      label: 'Home',
       path: '/home',
     },
     {
-      path: '/resume',
-      label: 'resume',
+      path: '/history',
+      label: 'History',
     },
     {
       path: '/blog',
-      label: 'blog',
+      label: 'Blog',
     },
   ]
 }

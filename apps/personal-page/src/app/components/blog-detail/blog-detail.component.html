@@ -9,7 +9,11 @@
   </h2>
   <img
     alt="blog details image"
-    [src]="blogPostDetail.cover_image"
+    [src]="
+      blogPostDetail.cover_image
+        ? blogPostDetail.cover_image
+        : blogPostDetail.social_image
+    "
     class="w-full md:h-[200px] h-auto object-cover rounded-xl mt-6"
     loading="lazy"
     style="color: transparent"

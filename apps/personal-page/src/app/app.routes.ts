@@ -2,7 +2,7 @@ import { Route } from '@angular/router';
 
 enum RoutePath {
   HOME = 'home',
-  RESUME = 'resume',
+  HISTORY = 'history',
   BLOG = 'blog',
 }
 
@@ -18,7 +18,7 @@ export const appRoutes: Route[] = [
       import('./components/home/home.routes').then((m) => m.HOME_ROUTES),
   },
   {
-    path: RoutePath.RESUME,
+    path: RoutePath.HISTORY,
      loadChildren: () =>
        import('./components/resume/resume.routes').then(
          (m) => m.RESUME_ROUTES,
