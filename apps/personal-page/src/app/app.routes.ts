@@ -29,4 +29,8 @@ export const appRoutes: Route[] = [
     loadChildren: () =>
       import('./components/blog/blog.routes').then((m) => m.BLOG_ROUTES),
   },
+  {
+    path: '**',
+    redirectTo: RoutePath.HOME,
+  }
 ];
