@@ -19,7 +19,9 @@ export class ResumeComponent {
       companyName: 'biGENIUS',
       jobTitle: 'Senior Frontend Developer',
       jobDescription: [
-        'Developing and maintaining the VirtusLab website, as well as the internal tools used by the company. Working with the latest technologies, such as Angular 11, Nx, TailwindCSS, and more.',
+        `Senior frontend developer, focused on Angular applications.
+        The main job is to develop an application for smart data automation, using state manager with
+        ngRx.`,
       ],
       technologies: [
         'Angular',
