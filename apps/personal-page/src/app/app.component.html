@@ -1,16 +1,13 @@
 <div
-  class="flex justify-center bg-no-repeat bg-center bg-cover bg-fixed md:pb-16 w-full"
+  class="flex justify-center bg-no-repeat bg-center bg-cover bg-fixed w-full"
 >
-  <div
-    class="container grid grid-cols-12 md:gap-10 justify-between lg:pt-[20px]"
-  >
-    <div class="col-span-12 lg:col-span-4 lg:h-screen lg:sticky top-44">
+  <div class="container grid grid-cols-12 md:gap-10 justify-between">
+    <div class="col-span-12 lg:col-span-4 lg:h-screen lg:sticky top-0">
       <vt-side-panel></vt-side-panel>
     </div>
-    <div class="col-span-12 lg:col-span-8">
+    <div class="col-span-12 lg:col-span-8 lg:pt-[20px]">
       <vt-header />
       <router-outlet></router-outlet>
-      <vt-nx-welcome></vt-nx-welcome>
     </div>
   </div>
 </div>
