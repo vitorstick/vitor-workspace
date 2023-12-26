@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "serve": "npx nx run personal-page:serve",
-    "build": "npx nx run personal-page:build --base-href=/vitor-workspace/",
+    "build": "npx nx run personal-page:build",
     "deploy": "npx gh-pages -d dist/personal-page"
   },
   "private": true,
