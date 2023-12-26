@@ -11,7 +11,6 @@ import { BlogPostDetail } from '../blog/models/blog.model';
   imports: [AsyncPipe],
   providers: [BlogService],
   templateUrl: './blog-detail.component.html',
-  styleUrl: './blog-detail.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BlogDetailComponent {
