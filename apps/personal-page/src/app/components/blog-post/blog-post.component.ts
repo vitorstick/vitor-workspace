@@ -1,7 +1,7 @@
 import { DatePipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { BlogPost } from '../blog/models/blog.model';
+import { BlogPost } from '../../models/blog.model';
 
 @Component({
   selector: 'vt-blog-post',

@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { BlogPost, BlogPostDetail } from '../models/blog.model';
 
 @Injectable()
-export class BlogService {
+export class BlogApiService {
 
   constructor(private http: HttpClient) {
   }

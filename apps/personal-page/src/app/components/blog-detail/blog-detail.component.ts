@@ -2,14 +2,14 @@ import { AsyncPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { BlogService } from '../blog/api/blog.service';
-import { BlogPostDetail } from '../blog/models/blog.model';
+import { BlogApiService } from '../../api/blog-api.service';
+import { BlogPostDetail } from '../../models/blog.model';
 
 @Component({
   selector: 'vt-blog-detail',
   standalone: true,
   imports: [AsyncPipe],
-  providers: [BlogService],
+  providers: [BlogApiService],
   templateUrl: './blog-detail.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
@@ -17,7 +17,7 @@ export class BlogDetailComponent {
   blogPostDetail$!: Observable<BlogPostDetail>;
 
 
-  constructor(private blogService: BlogService, private route: ActivatedRoute ) {
+  constructor(private blogService: BlogApiService, private route: ActivatedRoute ) {
     const id = this.route.snapshot.paramMap.get('id');
 
     if (id) {

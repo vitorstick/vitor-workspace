@@ -7,8 +7,7 @@
     <div
       class="grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 mt-[30px] grid gap-x-10 gap-y-7 mb-6"
     >
-      @defer (when blogPosts$ | async) { @for (post of blogPosts$ | async; track
-      post.slug) {
+      @defer (when blogPosts()) { @for (post of blogPosts(); track post.slug) {
       <vt-blog-post [post]="post"></vt-blog-post>
 
       } } @loading {

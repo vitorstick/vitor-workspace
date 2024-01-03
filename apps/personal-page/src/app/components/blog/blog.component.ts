@@ -1,19 +1,33 @@
 import { AsyncPipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, effect, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { BlogApiService } from '../../api/blog-api.service';
+import { BlogStoreService } from '../../services/blog-store.service';
 import { BlogPostComponent } from '../blog-post/blog-post.component';
-import { BlogService } from './api/blog.service';
 
 @Component({
   selector: 'vt-blog',
   standalone: true,
-  providers: [BlogService],
+  providers: [BlogApiService, BlogStoreService],
   templateUrl: './blog.component.html',
   imports: [AsyncPipe, BlogPostComponent],
 })
 export class BlogComponent {
+  blogStoreService = inject(BlogStoreService);
+  blogApiService = inject(BlogApiService);
 
-  blogPosts$ = this.blogService.getBlogPosts();
+  blogPosts = toSignal(this.blogApiService.getBlogPosts());
 
-  constructor(private blogService: BlogService) { }
-
+  constructor() {
+    effect(
+      () => {
+        if (this.blogPosts()?.length) {
+          this.blogStoreService.set(this.blogPosts() ?? []);
+        }
+      },
+      {
+        allowSignalWrites: true,
+      }
+    );
+  }
 }
